@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">RSS_Feed</string>
+
+    //Homepage
+    <string name="press_to_get_data">Press to get data</string>
+    <string name="contains_british_geological_survey_materials_nerc_2019">Contains British Geological Survey materials ©NERC 2019</string>
+    <string name="raw_data_is_displayed_here">Raw Data is Displayed here</string>
+
+    //List View
+    <string name="location">location</string>
+    <string name="strength">strength</string>
+
+    //Search Page
+    <string name="welcome_to_rss_feed">Welcome to RSS Feed</string>
+    <string name="sharon_shaji_s16233993">Sharon Shaji - S1623993</string>
+    <string name="search">Search</string>
+    <string name="start_date">Start Date</string>
+    <string name="end_date">End Date</string>
+    <string name="search_results">Search Results</string>
+    <string name="most_northerly">Most Northerly:</string>
+    <string name="most_southerly">Most Southerly:</string>
+    <string name="most_westerly">Most Westerly:</string>
+    <string name="most_easterly">Most Easterly:</string>
+    <string name="largest_magnitude">Largest Magnitude:</string>
+    <string name="deepest_earthquake">Deepest Earthquake:</string>
+
+
+</resources>

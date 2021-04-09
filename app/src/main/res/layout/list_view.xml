@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?><!--Name: Sharon Shaji-->
+<!--Student ID: S1623993-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/row_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="3dp"
+        android:text="@string/location"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/row_strength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/row_location"
+        android:layout_marginTop="4dp"
+        android:paddingBottom="3dp"
+        android:text="@string/strength"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/imgcolour"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_below="@id/row_location"
+        android:layout_alignRight="@id/row_strength"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginRight="-297dp"
+        android:src="@drawable/mag_bg_circle" />
+
+</RelativeLayout>

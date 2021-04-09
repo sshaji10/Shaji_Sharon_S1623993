@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?><!--Name: Sharon Shaji-->
+<!--Student ID: S1623993-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Search">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:contentInsetStart="16dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="139dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        app:srcCompat="@drawable/logo1" />
+
+    <TextView
+        android:id="@+id/txtsearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="37dp"
+        android:text="@string/search"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtsearch"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="37dp"
+        android:text="@string/sharon_shaji_s16233993"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <RelativeLayout
+        android:id="@+id/search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView3"
+        android:layout_centerHorizontal="true">
+
+        <EditText
+            android:id="@+id/etmindate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:hint="@string/start_date"
+            android:onClick="startDate"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/calendar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/etmindate"
+            app:srcCompat="@drawable/ic_baseline_date_range_24" />
+
+        <EditText
+            android:id="@+id/etmaxdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_toRightOf="@id/calendar"
+            android:hint="@string/end_date"
+            android:onClick="endDate"
+            android:textSize="15sp" />
+
+
+        <ImageView
+            android:id="@+id/calendar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/etmaxdate"
+            app:srcCompat="@drawable/ic_baseline_date_range_24" />
+
+        <Button
+            android:id="@+id/btnsearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="2dp"
+            android:layout_toRightOf="@id/calendar2"
+            android:text="@string/search" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="19dp"
+                android:text="@string/search_results"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtnorth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtheading"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/most_northerly"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtnorthdata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtheading"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/txtnorth"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtsouth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtnorth"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/most_southerly"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtsouthdata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtnorth"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/txtsouth"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtwest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtsouth"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/most_westerly"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtwestdata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtsouth"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/txtwest"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txteast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtwest"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/most_easterly"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txteastdata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtwest"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/txteast"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtmag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txteast"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/largest_magnitude"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtmagdata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txteast"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/txtmag"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtdeep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtmag"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/deepest_earthquake"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtdeepdata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtmag"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/txtdeep"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtshallow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtdeep"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="15dp"
+                android:text="Shallowest Earthquake:"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtshallowdata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtdeep"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_toRightOf="@+id/txtshallow"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/txtplain"
+                android:layout_width="5dp"
+                android:layout_height="50dp"
+                android:layout_below="@id/txtshallow"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
